@@ -1,0 +1,1911 @@
+
+➜  ~ cd Dropbox/Proyectos/
+➜  ~ cd Documents/Telmex/S12_connection/pipe_commands 
+➜  pipe_commands ls
+__pycache__  s12_commands.py  s12_functions.py
+➜  pipe_commands python3 s12_functions.py 
+
+
+        Selecciona una instrucción:
+
+            0. Salir
+
+            1. Consulta de dispositivo
+            2. Cambio de dispositivo
+            3. Alta
+            4. Baja
+
+            5. Backup
+            6. Resumen de todos los números
+            7. Números en un módulo
+            
+        
+                             Instrucción: 1
+                                  Número: 56001624
+5297:DN=K'56001624.
+    SEQ=9291.2020-06-10 
+    COM=5297
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  09:54:58  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9291.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       DISPLAY-ANY-SUBSCR                                             SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56001624                                
+                 
+       LCEID    = H'86B0                                  
+       NA       = H'8115                                  
+       LAN      = 141                                     
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       SCF      = PROV    
+       CF       = MAX    :  5    
+       CCBS     = PROV     ALL     
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+
+
+        Selecciona una instrucción:
+
+            0. Salir
+
+            1. Consulta de dispositivo
+            2. Cambio de dispositivo
+            3. Alta
+            4. Baja
+
+            5. Backup
+            6. Resumen de todos los números
+            7. Números en un módulo
+            
+        
+                             Instrucción: 1
+                                  Número: 56006648
+5297:DN=K'56006648.
+    SEQ=9292.2020-06-10 
+    COM=5297
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  09:55:31  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9292.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       DISPLAY-ANY-SUBSCR                                             SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56006648                                
+                 
+       LCEID    = H'7E00                                  
+       NA       = H'332                                   
+       LAN      = 48                                      
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       OCBP     = CANDADO 
+       CW       = PROV    
+                  CIDCW   
+                  ACTIVE  
+       CLIP     = PROV    
+                  CALLAPPL LOCALNAT 
+       CFU      = PROV    
+                           CLIP    
+       CFB      = PROV    
+                           CLIP    
+       CFNR     = PROV    
+                           CLIP    
+       CF       = MAX    :  5    
+       CCBS     = PROV     ALL     
+       TPS      = PROV     TYPE : CONF3   
+       MSGWSERV = PROV     COMBINED
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       CFVM     = CFBPROV  CFNRPROV
+                  CFBACT   CFNRACT 
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+
+
+        Selecciona una instrucción:
+
+            0. Salir
+
+            1. Consulta de dispositivo
+            2. Cambio de dispositivo
+            3. Alta
+            4. Baja
+
+            5. Backup
+            6. Resumen de todos los números
+            7. Números en un módulo
+            
+        
+                             Instrucción: 0
+➜  pipe_commands ls
+__pycache__  s12_commands.py  s12_functions.py
+➜  pipe_commands mkdir Input_lists 
+➜  pipe_commands cd $_
+➜  Input_lists vim cambio_de_dispositivo 
+➜  Input_lists cd ..                    
+➜  pipe_commands python3 s12_functions.py
+Traceback (most recent call last):
+  File "/home/sergio/.local/lib/python3.8/site-packages/serial/serialposix.py", line 265, in open
+    self.fd = os.open(self.portstr, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)
+PermissionError: [Errno 13] Permission denied: '/dev/ttyUSB0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "s12_functions.py", line 19, in connect
+    ser.open()
+  File "/home/sergio/.local/lib/python3.8/site-packages/serial/serialposix.py", line 268, in open
+    raise SerialException(msg.errno, "could not open port {}: {}".format(self._port, msg))
+serial.serialutil.SerialException: [Errno 13] could not open port /dev/ttyUSB0: [Errno 13] Permission denied: '/dev/ttyUSB0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sergio/.local/lib/python3.8/site-packages/serial/serialposix.py", line 265, in open
+    self.fd = os.open(self.portstr, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/ttyUSB1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "s12_functions.py", line 128, in <module>
+    display_menu()
+  File "s12_functions.py", line 117, in display_menu
+    ser = connect()
+  File "s12_functions.py", line 22, in connect
+    ser.open()
+  File "/home/sergio/.local/lib/python3.8/site-packages/serial/serialposix.py", line 268, in open
+    raise SerialException(msg.errno, "could not open port {}: {}".format(self._port, msg))
+serial.serialutil.SerialException: [Errno 2] could not open port /dev/ttyUSB1: [Errno 2] No such file or directory: '/dev/ttyUSB1'
+➜  pipe_commands ls /dev/ttyUSB0 
+/dev/ttyUSB0
+➜  pipe_commands python3 s12_functions.py
+Traceback (most recent call last):
+  File "/home/sergio/.local/lib/python3.8/site-packages/serial/serialposix.py", line 265, in open
+    self.fd = os.open(self.portstr, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)
+PermissionError: [Errno 13] Permission denied: '/dev/ttyUSB0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "s12_functions.py", line 19, in connect
+    ser.open()
+  File "/home/sergio/.local/lib/python3.8/site-packages/serial/serialposix.py", line 268, in open
+    raise SerialException(msg.errno, "could not open port {}: {}".format(self._port, msg))
+serial.serialutil.SerialException: [Errno 13] could not open port /dev/ttyUSB0: [Errno 13] Permission denied: '/dev/ttyUSB0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sergio/.local/lib/python3.8/site-packages/serial/serialposix.py", line 265, in open
+    self.fd = os.open(self.portstr, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/ttyUSB1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "s12_functions.py", line 128, in <module>
+    display_menu()
+  File "s12_functions.py", line 117, in display_menu
+    ser = connect()
+  File "s12_functions.py", line 22, in connect
+    ser.open()
+  File "/home/sergio/.local/lib/python3.8/site-packages/serial/serialposix.py", line 268, in open
+    raise SerialException(msg.errno, "could not open port {}: {}".format(self._port, msg))
+serial.serialutil.SerialException: [Errno 2] could not open port /dev/ttyUSB1: [Errno 2] No such file or directory: '/dev/ttyUSB1'
+➜  pipe_commands sudo chmod 66 /dev/ttyUSB0 
+[sudo] password for sergio: 
+➜  pipe_commands python3 s12_functions.py  
+
+
+        Selecciona una instrucción:
+
+            0. Salir
+
+            1. Consulta de dispositivo
+            2. Cambio de dispositivo
+            3. Alta
+            4. Baja
+
+            5. Backup
+            6. Resumen de todos los números
+            7. Números en un módulo
+
+            8. Cambio de varos dispositivos
+            
+        
+                             Instrucción: 8
+
+
+        Selecciona una instrucción:
+
+            0. Salir
+
+            1. Consulta de dispositivo
+            2. Cambio de dispositivo
+            3. Alta
+            4. Baja
+
+            5. Backup
+            6. Resumen de todos los números
+            7. Números en un módulo
+
+            8. Cambio de varos dispositivos
+            
+        
+                             Instrucción: 0
+➜  pipe_commands python3 s12_functions.py
+
+
+        Selecciona una instrucción:
+
+            0. Salir
+
+            1. Consulta de dispositivo
+            2. Cambio de dispositivo
+            3. Alta
+            4. Baja
+
+            5. Backup
+            6. Resumen de todos los números
+            7. Números en un módulo
+
+            8. Cambio de varos dispositivos
+            
+        
+                             Instrucción: 8
+Los datos se tomarán de cambio_de_dispositivo: 
+5292:DN=K'56944492.
+    SEQ=9302.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:19:20  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9302+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0001 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 2    
+       DN            = 5556944492          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  10:19:51  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9302+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0002 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 2    
+       DN            = 5556944492          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  10:19:52  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9302.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56944492                                
+                 
+       LCEID    = H'7E00                                  
+       NA       = H'332                                   
+       LAN      = 2                                       
+       SUBTYP   = ASUBS   
+                 
+
+       LAST REPORT          NO = 06561
+
+    >
+5289:2=K'56944492,6=H'8215,8=141,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9304.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:20:05  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9304.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56944492                                
+                 
+       LCEID    = H'88B0                                  
+       NA       = H'8215                                  
+       LAN      = 141                                     
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       SCF      = PROV    
+       CF       = MAX    :  5    
+       STATE    = CH1  : FREES   
+       CCBS     = PROV     ALL     
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+5292:DN=K'56943006.
+    SEQ=9305.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:20:14  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9305.2020-06-10 06563  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                       NOT SUCCESSFUL
+       -------------------------------------------------------------------------
+       
+       AREACODE = 55    
+       DN       = 56943006                         
+         
+       DN IS NOT ASSIGNED
+                                                           
+
+       LAST REPORT          NO = 06563
+
+    >
+5289:2=K'56943006,6=H'8215,8=145,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9306.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:20:27  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9306.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56943006                                
+                 
+       LCEID    = H'88B0                                  
+       NA       = H'8215                                  
+       LAN      = 145                                     
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       SCF      = PROV    
+       CF       = MAX    :  5    
+       STATE    = CH1  : FREES   
+       CCBS     = PROV     ALL     
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+
+
+        Selecciona una instrucción:
+
+            0. Salir
+
+            1. Consulta de dispositivo
+            2. Cambio de dispositivo
+            3. Alta
+            4. Baja
+
+            5. Backup
+            6. Resumen de todos los números
+            7. Números en un módulo
+
+            8. Cambio de varos dispositivos
+            
+        
+                             Instrucción: 4
+                                  Número: 56943006
+5292:DN=K'56943006.
+    SEQ=9307.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:26:57  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9307.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56943006                                
+                 
+       LCEID    = H'88B0                                  
+       NA       = H'8215                                  
+       LAN      = 145                                     
+       SUBTYP   = ASUBS   
+                 
+
+       LAST REPORT          NO = 06561
+
+    >
+
+
+        Selecciona una instrucción:
+
+            0. Salir
+
+            1. Consulta de dispositivo
+            2. Cambio de dispositivo
+            3. Alta
+            4. Baja
+
+            5. Backup
+            6. Resumen de todos los números
+            7. Números en un módulo
+
+            8. Cambio de varos dispositivos
+            
+        
+                             Instrucción: 0
+➜  pipe_commands vim Input_lists/cambio_de_dispositivo 
+➜  pipe_commands python3 s12_functions.py             
+
+
+        Selecciona una instrucción:
+
+            0. Salir
+
+            1. Consulta de dispositivo
+            2. Cambio de dispositivo
+            3. Alta
+            4. Baja
+
+            5. Backup
+            6. Resumen de todos los números
+            7. Números en un módulo
+
+            8. Cambio de varos dispositivos
+            
+        
+                             Instrucción: 8
+Los datos se tomarán de cambio_de_dispositivo: 
+5292:DN=K'56943027.
+    SEQ=9311.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:54:32  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9311+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0001 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 18   
+       DN            = 5556943027          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  10:55:02  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9311+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0002 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 18   
+       DN            = 5556943027          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  10:55:04  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9311.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56943027                                
+                 
+       LCEID    = H'7E00                                  
+       NA       = H'332                                   
+       LAN      = 18                                      
+       SUBTYP   = ASUBS   
+                 
+
+       LAST REPORT          NO = 06561
+
+    >
+5289:2=K'56943027,6=H'8215,8=145,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9312.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:55:18  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9312.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56943027                                
+                 
+       LCEID    = H'88B0                                  
+       NA       = H'8215                                  
+       LAN      = 145                                     
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       SCF      = PROV    
+       CF       = MAX    :  5    
+       STATE    = CH1  : FREES   
+       CCBS     = PROV     ALL     
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+5292:DN=K'56943018.
+    SEQ=9313.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:55:28  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9313.2020-06-10 06563  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                       NOT SUCCESSFUL
+       -------------------------------------------------------------------------
+       
+       AREACODE = 55    
+       DN       = 56943018                         
+         
+       THE DN BELONGS TO A GROUP
+       USE THE PABX OR ATTENDANTGROUP-COMMANDS
+                                                           
+
+       LAST REPORT          NO = 06563
+
+    >
+5289:2=K'56943018,6=H'8215,8=234,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9314.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:55:37  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9314.2020-06-10 06563  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                       NOT SUCCESSFUL
+       -------------------------------------------------------------------------
+       
+       AREACODE = 55    
+       DN       = 56943018                         
+       NA       = H'8215
+       LCEID    = H'88B0
+       LAN      = 234  
+       SUBGRP   = SUBG10  
+       ORGACC   = 007     
+       ORGCH    = 003
+       SUBTYP   = ASUBS     
+         
+       DN ALREADY IN USE
+       SELECT AN UNASSIGNED DIRECTORY NUMBER
+                                                           
+
+       LAST REPORT          NO = 06563
+
+    >
+5292:DN=K'56949216.
+    SEQ=9315.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:56:19  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9315+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0001 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 27   
+       DN            = 5556949216          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  10:56:50  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9315+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0002 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 27   
+       DN            = 5556949216          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  10:56:51  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9315.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56949216                                
+                 
+       LCEID    = H'7E00                                  
+       NA       = H'332                                   
+       LAN      = 27                                      
+       SUBTYP   = ASUBS   
+                 
+
+       LAST REPORT          NO = 06561
+
+    >
+5289:2=K'56949216,6=H'8215,8=238,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9317.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+    EXECUTING ...
+    EXECUTING ...
+    EXECUTING ...
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:57:35  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9317.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56949216                                
+                 
+       LCEID    = H'88B0                                  
+       NA       = H'8215                                  
+       LAN      = 238                                     
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       SCF      = PROV    
+       CF       = MAX    :  5    
+       STATE    = CH1  : FREES   
+       CCBS     = PROV     ALL     
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+5292:DN=K'56006190.
+    SEQ=9318.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:58:18  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9318+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0001 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 29   
+       DN            = 5556006190          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  10:58:48  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9318+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0002 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 29   
+       DN            = 5556006190          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  10:58:50  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9318.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56006190                                
+                 
+       LCEID    = H'7E00                                  
+       NA       = H'332                                   
+       LAN      = 29                                      
+       SUBTYP   = ASUBS   
+                 
+
+       LAST REPORT          NO = 06561
+
+    >
+5289:2=K'56006190,6=H'8215,8=233,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9320.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:59:03  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9320.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56006190                                
+                 
+       LCEID    = H'88B0                                  
+       NA       = H'8215                                  
+       LAN      = 233                                     
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       SCF      = PROV    
+       CF       = MAX    :  5    
+       STATE    = CH1  : FREES   
+       CCBS     = PROV     ALL     
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+5292:DN=K'56005055.
+    SEQ=9321.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  10:59:46  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9321+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0001 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 30   
+       DN            = 5556005055          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:00:16  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9321+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0002 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 30   
+       DN            = 5556005055          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:00:17  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9321.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56005055                                
+                 
+       LCEID    = H'7E00                                  
+       NA       = H'332                                   
+       LAN      = 30                                      
+       SUBTYP   = ASUBS   
+                 
+
+       LAST REPORT          NO = 06561
+
+    >
+5289:2=K'56005055,6=H'8215,8=209,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9322.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:00:30  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9322.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56005055                                
+                 
+       LCEID    = H'88B0                                  
+       NA       = H'8215                                  
+       LAN      = 209                                     
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       SCF      = PROV    
+       CF       = MAX    :  5    
+       STATE    = CH1  : FREES   
+       CCBS     = PROV     ALL     
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+5292:DN=K'56943031.
+    SEQ=9323.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:01:13  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9323+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0001 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 32   
+       DN            = 5556943031          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:01:44  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9323+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0002 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 32   
+       DN            = 5556943031          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:01:45  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9323.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56943031                                
+                 
+       LCEID    = H'7E00                                  
+       NA       = H'332                                   
+       LAN      = 32                                      
+       SUBTYP   = ASUBS   
+                 
+
+       LAST REPORT          NO = 06561
+
+    >
+5289:2=K'56943031,6=H'8215,8=210,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9324.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:01:58  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9324.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56943031                                
+                 
+       LCEID    = H'88B0                                  
+       NA       = H'8215                                  
+       LAN      = 210                                     
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       SCF      = PROV    
+       CF       = MAX    :  5    
+       STATE    = CH1  : FREES   
+       CCBS     = PROV     ALL     
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+5292:DN=K'56943032.
+    SEQ=9325.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:02:08  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9325.2020-06-10 06563  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                       NOT SUCCESSFUL
+       -------------------------------------------------------------------------
+       
+       AREACODE = 55    
+       DN       = 56943032                         
+         
+       THE DN BELONGS TO A GROUP
+       USE THE PABX OR ATTENDANTGROUP-COMMANDS
+                                                           
+
+       LAST REPORT          NO = 06563
+
+    >
+5289:2=K'56943032,6=H'8215,8=206,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9326.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:02:16  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9326.2020-06-10 06563  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                       NOT SUCCESSFUL
+       -------------------------------------------------------------------------
+       
+       AREACODE = 55    
+       DN       = 56943032                         
+       NA       = H'8215
+       LCEID    = H'88B0
+       LAN      = 206  
+       SUBGRP   = SUBG61  
+       ORGACC   = 006     
+       ORGCH    = 003
+       SUBTYP   = ASUBS     
+         
+       DN ALREADY IN USE
+       SELECT AN UNASSIGNED DIRECTORY NUMBER
+                                                           
+
+       LAST REPORT          NO = 06563
+
+    >
+5292:DN=K'56943033.
+    SEQ=9327.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:02:25  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9327.2020-06-10 06563  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                       NOT SUCCESSFUL
+       -------------------------------------------------------------------------
+       
+       AREACODE = 55    
+       DN       = 56943033                         
+         
+       THE DN BELONGS TO A GROUP
+       USE THE PABX OR ATTENDANTGROUP-COMMANDS
+                                                           
+
+       LAST REPORT          NO = 06563
+
+    >
+5289:2=K'56943033,6=H'8215,8=205,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9328.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:02:34  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9328.2020-06-10 06563  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                       NOT SUCCESSFUL
+       -------------------------------------------------------------------------
+       
+       AREACODE = 55    
+       DN       = 56943033                         
+       NA       = H'8215
+       LCEID    = H'88B0
+       LAN      = 205  
+       SUBGRP   = SUBG02  
+       ORGACC   = 006     
+       ORGCH    = 003
+       SUBTYP   = ASUBS     
+         
+       DN ALREADY IN USE
+       SELECT AN UNASSIGNED DIRECTORY NUMBER
+                                                           
+
+       LAST REPORT          NO = 06563
+
+    >
+5292:DN=K'56005504.
+    SEQ=9329.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:03:16  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9329+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0001 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 37   
+       DN            = 5556005504          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:03:47  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9329+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0002 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 37   
+       DN            = 5556005504          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:03:48  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9329.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56005504                                
+                 
+       LCEID    = H'7E00                                  
+       NA       = H'332                                   
+       LAN      = 37                                      
+       SUBTYP   = ASUBS   
+                 
+
+       LAST REPORT          NO = 06561
+
+    >
+5289:2=K'56005504,6=H'8215,8=197,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9330.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:04:01  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9330.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56005504                                
+                 
+       LCEID    = H'88B0                                  
+       NA       = H'8215                                  
+       LAN      = 197                                     
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       SCF      = PROV    
+       CF       = MAX    :  5    
+       STATE    = CH1  : FREES   
+       CCBS     = PROV     ALL     
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+5292:DN=K'56005603.
+    SEQ=9331.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:04:43  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9331+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0001 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 51   
+       DN            = 5556005603          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:05:14  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9331+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0002 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 51   
+       DN            = 5556005603          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:05:15  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9331.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56005603                                
+                 
+       LCEID    = H'7E00                                  
+       NA       = H'332                                   
+       LAN      = 51                                      
+       SUBTYP   = ASUBS   
+                 
+
+       LAST REPORT          NO = 06561
+
+    >
+5289:2=K'56005603,6=H'8215,8=193,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9332.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:05:27  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9332.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56005603                                
+                 
+       LCEID    = H'88B0                                  
+       NA       = H'8215                                  
+       LAN      = 193                                     
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       SCF      = PROV    
+       CF       = MAX    :  5    
+       STATE    = CH1  : FREES   
+       CCBS     = PROV     ALL     
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+5292:DN=K'56943055.
+    SEQ=9333.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:06:10  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9333+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0001 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 56   
+       DN            = 5556943055          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:06:41  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9333+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0002 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 56   
+       DN            = 5556943055          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:06:42  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9333.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56943055                                
+                 
+       LCEID    = H'7E00                                  
+       NA       = H'332                                   
+       LAN      = 56                                      
+       SUBTYP   = ASUBS   
+                 
+
+       LAST REPORT          NO = 06561
+
+    >
+5289:2=K'56943055,6=H'8215,8=189,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9335.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+    EXECUTING ...
+    EXECUTING ...
+    EXECUTING ...
+    EXECUTING ...
+    EXECUTING ...
+    EXECUTING ...
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:07:57  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9335.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56943055                                
+                 
+       LCEID    = H'88B0                                  
+       NA       = H'8215                                  
+       LAN      = 189                                     
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       SCF      = PROV    
+       CF       = MAX    :  5    
+       STATE    = CH1  : FREES   
+       CCBS     = PROV     ALL     
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+5292:DN=K'56943056.
+    SEQ=9337.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:08:40  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9337+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0001 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 57   
+       DN            = 5556943056          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:09:10  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9337+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0002 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 57   
+       DN            = 5556943056          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:09:12  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9337.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56943056                                
+                 
+       LCEID    = H'7E00                                  
+       NA       = H'332                                   
+       LAN      = 57                                      
+       SUBTYP   = ASUBS   
+                 
+
+       LAST REPORT          NO = 06561
+
+    >
+5289:2=K'56943056,6=H'8215,8=190,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9339.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:09:25  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9339.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56943056                                
+                 
+       LCEID    = H'88B0                                  
+       NA       = H'8215                                  
+       LAN      = 190                                     
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       SCF      = PROV    
+       CF       = MAX    :  5    
+       STATE    = CH1  : FREES   
+       CCBS     = PROV     ALL     
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+5292:DN=K'56006648.
+    SEQ=9340.2020-06-10 
+    COM=5292
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:10:07  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9340+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0001 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 48   
+       DN            = 5556006648          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:10:37  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9340+2020-06-10 05374  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD TOPOLOGY CMD HDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                              WARNING
+                                                           RESULT    PART 0002 +
+       -------------------------------------------------------------------------
+       
+       ERROR parameters :
+       ------------------
+       EN PHYS (LOG) = H'0332 (H'7E00)  & 48   
+       DN            = 5556006648          
+       
+       ERROR info       :
+       ------------------ 
+       1418 
+       MSG TO DH LOST
+
+       REPORT FOLLOWS       NO = 05374
+
+    ABASTOS_PAM32N11  2020-06-10  11:10:38  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9340.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       REMOVE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56006648                                
+                 
+       LCEID    = H'7E00                                  
+       NA       = H'332                                   
+       LAN      = 48                                      
+       SUBTYP   = ASUBS   
+                 
+
+       LAST REPORT          NO = 06561
+
+    >
+5289:2=K'56006648,6=H'8215,8=181,106="SUBG02",46=1,45=1&K'01&K'123&1&K'00&K'123.
+    SEQ=9341.2020-06-10 
+    COM=5289
+    JOB SUBMITTED
+    
+    
+                    
+    RESULT FOLLOWS
+    
+    ABASTOS_PAM32N11  2020-06-10  11:10:51  WE      
+    USCAR057  0130/002C/0003  
+    SEQ=9341.2020-06-10 06561  NJ54EL13   DTHFAA01   NADKFF02    
+    SWA-SAD ITF&SPSRV CMDHDL                                        
+
+       CREATE-SINGLE-SUBSCR                                           SUCCESSFUL
+       -------------------------------------------------------------------------
+       AREACODE = 55                                      
+       DN       = 56006648                                
+                 
+       LCEID    = H'88B0                                  
+       NA       = H'8215                                  
+       LAN      = 181                                     
+       SUBTYP   = ASUBS   
+                 
+       CPC      = ORDIN   
+       SUBGRP   = SUBGNBR: SUBG02            ORGCH  : 003 ORGRTG : 006          
+        
+       CARRIER  = NATCDD : 01                    NATCIC : 123                   
+   
+                  INTCDD : 00                    INTCIC : 123                   
+   
+       SCF      = PROV    
+       CF       = MAX    :  5    
+       STATE    = CH1  : FREES   
+       CCBS     = PROV     ALL     
+       SDT       
+       LINECHAR = SUBSIG   CBSET  
+       LANGCAT  = PROV     SPANISH         
+
+       LAST REPORT          NO = 06561
+
+    >
+
+
+        Selecciona una instrucción:
+
+            0. Salir
+
+            1. Consulta de dispositivo
+            2. Cambio de dispositivo
+            3. Alta
+            4. Baja
+
+            5. Backup
+            6. Resumen de todos los números
+            7. Números en un módulo
+
+            8. Cambio de varos dispositivos
+            
+        
+                             Instrucción: 0
+➜  pipe_commands cat Input_lists/cambio_de_dispositivo
+DN(NÚMERO) NA(MÓDULO) LAN(PAR) - Los datos deben estar separados por espacios 
+56943027 8215 145
+56943018 8215 234
+56949216 8215 238
+56006190 8215 233
+56005055 8215 209
+56943031 8215 210
+56943032 8215 206
+56943033 8215 205
+56005504 8215 197
+56005603 8215 193
+56943055 8215 189
+56943056 8215 190
+56006648 8215 181
+➜  pipe_commands vim Input_lists/cambio_de_dispositivo
+➜  pipe_commands 
